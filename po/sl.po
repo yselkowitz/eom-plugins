@@ -1,0 +1,257 @@
+# Slovenian translation for eom-plugins.
+# Copyright (C) 2009 eom-plugins COPYRIGHT HOLDER
+# This file is distributed under the same license as the eom-plugins package.
+#
+# Matej Urbančič <mateju@svn.gnome.org>, 2008 - 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eom-plugins\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eom-plugins&component=general\n"
+"POT-Creation-Date: 2010-02-10 19:40+0000\n"
+"PO-Revision-Date: 2010-05-13 21:09+0100\n"
+"Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
+"Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
+"X-Launchpad-Export-Date: 2007-10-05 05:48+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+"X-Poedit-Country: SLOVENIA\n"
+"X-Poedit-Language: Slovenian\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../plugins/exif-display/eom-exif-display-plugin.c:136
+msgid " (invalid Unicode)"
+msgstr " (neveljaven Unicode)"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../plugins/exif-display/eom-exif-display-plugin.c:212
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1fmm (leča)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../plugins/exif-display/eom-exif-display-plugin.c:223
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1fmm (35mm film)"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Splošno</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "<b>Histogram</b>"
+msgstr "<b>Histogram:</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:3
+msgid "Display RGB histogram"
+msgstr "Pokaži RGB histogram"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "Display camera settings in statusbar"
+msgstr "Pokaži nastavitve aparata v vrstici stanja"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
+msgid "Display per-channel histogram"
+msgstr "Pokaži kanalni histogram"
+
+#: ../plugins/exif-display/exif-display.eom-plugin.desktop.in.h:1
+msgid "Displays camera settings and histogram"
+msgstr "Pokaže nastavitve aparata in histogram"
+
+#: ../plugins/exif-display/exif-display.eom-plugin.desktop.in.h:2
+msgid "Exif display"
+msgstr "Exif prikaz"
+
+#: ../plugins/exif-display/exif-display.ui.h:1
+msgid "<b>Aperture:</b>"
+msgstr "<b>Zaslonka:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Description:</b>"
+msgstr "<b>Opis:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>Čas osvetljevanja:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>Nagnjenost osvetlitve:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
+msgid "<b>ISO speed:</b>"
+msgstr "<b>Hitrost ISO:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Metering:</b>"
+msgstr "<b>Umerjanje:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:7
+msgid "<b>Zoom:</b>"
+msgstr "<b>Približanje:</b>"
+
+#: ../plugins/fit-to-width/eom-fit-to-width-plugin.c:85
+msgid "Fit to width"
+msgstr "Prilagodi širini"
+
+#: ../plugins/fit-to-width/eom-fit-to-width-plugin.c:87
+#: ../plugins/fit-to-width/fit-to-width.eom-plugin.desktop.in.h:1
+msgid "Zoom to fit image width"
+msgstr "Približaj prilagojeno širini"
+
+#: ../plugins/map/eom-map-plugin.c:321
+msgid "Jump to current image's location"
+msgstr "Skoči na trenutno mesto slike"
+
+#: ../plugins/map/eom-map-plugin.c:333
+msgid "Zoom in"
+msgstr "Približaj"
+
+#: ../plugins/map/eom-map-plugin.c:341
+msgid "Zoom out"
+msgstr "Oddalji"
+
+#: ../plugins/map/eom-map-plugin.c:355
+#: ../plugins/map/map.eom-plugin.desktop.in.h:2
+msgid "Map"
+msgstr "Zemljevid"
+
+#: ../plugins/map/map.eom-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "Pokaži geografski položaj mesta, kjer je bila slika posneta"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:124
+msgid "Upload to PicasaWeb"
+msgstr "Pošlji na PicasaWeb"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:126
+#: ../plugins/postasa/postasa.eom-plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Pošiljanje vaših slike na portal PicasaWeb"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:321
+msgid "Uploading..."
+msgstr "Pošiljanje ..."
+
+#: ../plugins/postasa/eom-postasa-plugin.c:368
+msgid "Uploaded"
+msgstr "Poslano"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:372
+msgid "Cancelled"
+msgstr "Preklicano"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:375
+msgid "Failed"
+msgstr "Napaka"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:523
+#, c-format
+msgid "Login failed. %s"
+msgstr "Prijava ni uspela. %s"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:527
+msgid "Logged in successully."
+msgstr "Uspešna prijava."
+
+#: ../plugins/postasa/eom-postasa-plugin.c:528
+msgid "Close"
+msgstr "Zapri"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:549
+#: ../plugins/postasa/postasa-config.xml.h:1
+msgid "Cancel"
+msgstr "Prekliči"
+
+#. TODO: want to handle passwords more securely
+#: ../plugins/postasa/eom-postasa-plugin.c:555
+msgid "Logging in..."
+msgstr "Prijavljanje ..."
+
+#: ../plugins/postasa/eom-postasa-plugin.c:583
+msgid "Please log in to continue upload."
+msgstr "Prijavite se za nadaljevanje pošiljanja."
+
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "Login"
+msgstr "Prijava"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "Password"
+msgstr "Geslo"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "PicasaWeb Login"
+msgstr "Prijava PicasaWeb"
+
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "Username"
+msgstr "Uporabniško ime"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:1
+msgid "Cancel All"
+msgstr "Prekliči vse"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "Cancel Selected"
+msgstr "Prekliči izbrano"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Uploads:"
+msgstr "Pošiljanje:"
+
+#: ../plugins/postasa/postasa.eom-plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "Program za prenos datotek na PicasaWeb"
+
+#: ../plugins/postr/eom-postr-plugin.c:57
+msgid "Upload to Flickr"
+msgstr "Prenesi na Flickr"
+
+#: ../plugins/postr/eom-postr-plugin.c:59
+#: ../plugins/postr/postr.eom-plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Prenos vaših slike na portal Flickr"
+
+#: ../plugins/postr/postr.eom-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Program za pošiljanje datotek na Flickr"
+
+#: ../plugins/pythonconsole/pythonconsole.eom-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Konzola Python"
+
+#: ../plugins/pythonconsole/pythonconsole.eom-plugin.desktop.in.h:2
+msgid "Python console for Eye of MATE"
+msgstr "Konzola Python za program Gnome oko"
+
+#: ../plugins/send-by-mail/eom-send-by-mail-plugin.c:60
+msgid "Send by Mail"
+msgstr "Pošlji po pošti"
+
+#: ../plugins/send-by-mail/eom-send-by-mail-plugin.c:62
+msgid "Send the selected images by mail"
+msgstr "Pošiljanje izbranih slik po pošti"
+
+#: ../plugins/send-by-mail/send-by-mail.eom-plugin.desktop.in.h:1
+msgid "Send By Mail"
+msgstr "Pošlji po pošti"
+
+#: ../plugins/send-by-mail/send-by-mail.eom-plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Pošlje sliko priloženo novemu sporočilu"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eom-plugin.desktop.in.h:1
+msgid "Shuffles images in slideshow mode"
+msgstr "Premešaj slike med prikazovanjem predstavitve"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eom-plugin.desktop.in.h:2
+msgid "Slideshow Shuffle"
+msgstr "Premešaj slike med predstavitvijo"

@@ -1,0 +1,253 @@
+# German translation of eom-plugins.
+# Mario Blättermann <mariobl@gnome.org>, 2008-2010.
+# Felix Riemann <friemann@gnome.org>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eom-plugins\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eom-"
+"plugins&component=general\n"
+"POT-Creation-Date: 2010-02-15 18:55+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
+"Language-Team: German <gnome-de@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+
+#: ../plugins/exif-display/eom-exif-display-plugin.c:136
+msgid " (invalid Unicode)"
+msgstr " (ungültiges Unicode)"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../plugins/exif-display/eom-exif-display-plugin.c:212
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1f (Linse)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../plugins/exif-display/eom-exif-display-plugin.c:223
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1f (35mm-Film)"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Allgemein</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "<b>Histogram</b>"
+msgstr "<b>Histogramm</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:3
+msgid "Display RGB histogram"
+msgstr "RGB-Histogramm anzeigen"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "Display camera settings in statusbar"
+msgstr "Kameraeinstellungen in Statusleiste anzeigen"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
+msgid "Display per-channel histogram"
+msgstr "Einzelkanal-Histogramm anzeigen"
+
+#: ../plugins/exif-display/exif-display.eom-plugin.desktop.in.h:1
+msgid "Displays camera settings and histogram"
+msgstr "Zeigt Kameraeinstellungen und Histogramme an"
+
+#: ../plugins/exif-display/exif-display.eom-plugin.desktop.in.h:2
+msgid "Exif display"
+msgstr "Exif-Anzeige"
+
+#: ../plugins/exif-display/exif-display.ui.h:1
+msgid "<b>Aperture:</b>"
+msgstr "<b>Blende:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Description:</b>"
+msgstr "<b>Beschreibung:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>Belichtungszeit:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>Belichtungskorrektur:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
+msgid "<b>ISO speed:</b>"
+msgstr "<b>ISO-Emfindlichkeit:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Metering:</b>"
+msgstr "<b>Belichtungsmessung:</b>"
+
+# Hier steht zwar Zoom, aber gemeint ist die Brennweite
+#: ../plugins/exif-display/exif-display.ui.h:7
+msgid "<b>Zoom:</b>"
+msgstr "<b>Brennweite:</b>"
+
+#: ../plugins/fit-to-width/eom-fit-to-width-plugin.c:85
+msgid "Fit to width"
+msgstr "Breite einpassen"
+
+#: ../plugins/fit-to-width/eom-fit-to-width-plugin.c:87
+#: ../plugins/fit-to-width/fit-to-width.eom-plugin.desktop.in.h:1
+msgid "Zoom to fit image width"
+msgstr "Vergrößerung auf Bildbreite anpassen"
+
+#: ../plugins/map/eom-map-plugin.c:321
+msgid "Jump to current image's location"
+msgstr "Zum Ort des aktuellen Bildes springen"
+
+#: ../plugins/map/eom-map-plugin.c:333
+msgid "Zoom in"
+msgstr "Vergrößern"
+
+#: ../plugins/map/eom-map-plugin.c:341
+msgid "Zoom out"
+msgstr "Verkleinern"
+
+#: ../plugins/map/eom-map-plugin.c:355
+#: ../plugins/map/map.eom-plugin.desktop.in.h:2
+msgid "Map"
+msgstr "Karte"
+
+#: ../plugins/map/map.eom-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "Die Geoposition eines Bildes in einer Karte anzeigen"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:124
+msgid "Upload to PicasaWeb"
+msgstr "Hochladen zu PicasaWeb"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:126
+#: ../plugins/postasa/postasa.eom-plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Hochladen Ihrer Bilder zum PicasaWeb-Bilderdienst"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:320
+msgid "Uploading..."
+msgstr "Übertragung läuft …"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:366
+msgid "Uploaded"
+msgstr "Hochgeladen"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:370
+msgid "Cancelled"
+msgstr "Abgebrochen"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:373
+msgid "Failed"
+msgstr "Fehlgeschlagen"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:520
+#, c-format
+msgid "Login failed. %s"
+msgstr "Anmeldung fehlgeschlagen. %s"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:524
+msgid "Logged in successully."
+msgstr "Erfolgreich angemeldet."
+
+#: ../plugins/postasa/eom-postasa-plugin.c:525
+msgid "Close"
+msgstr "Schließen"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:546
+#: ../plugins/postasa/postasa-config.xml.h:1
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. TODO: want to handle passwords more securely
+#: ../plugins/postasa/eom-postasa-plugin.c:552
+msgid "Logging in..."
+msgstr "Anmeldung läuft …"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:580
+msgid "Please log in to continue upload."
+msgstr "Bitte melden Sie sich an, um die Übertragung fortzusetzen."
+
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "Login"
+msgstr "Anmeldung"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "Password"
+msgstr "Passwort"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "PicasaWeb Login"
+msgstr "PicasaWeb-Anmeldung"
+
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "Username"
+msgstr "Benutzername"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:1
+msgid "Cancel All"
+msgstr "Alles abbrechen"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "Cancel Selected"
+msgstr "Ausgewählte abbrechen"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Uploads:"
+msgstr "Übertragungen:"
+
+#: ../plugins/postasa/postasa.eom-plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "PicasaWeb-Uploader"
+
+#: ../plugins/postr/eom-postr-plugin.c:57
+msgid "Upload to Flickr"
+msgstr "Hochladen zu Flickr"
+
+#: ../plugins/postr/eom-postr-plugin.c:59
+#: ../plugins/postr/postr.eom-plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Hochladen Ihrer Bilder zum Flickr-Bilderdienst"
+
+#: ../plugins/postr/postr.eom-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Flickr Uploader"
+
+#: ../plugins/pythonconsole/pythonconsole.eom-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Python-Konsole"
+
+#: ../plugins/pythonconsole/pythonconsole.eom-plugin.desktop.in.h:2
+msgid "Python console for Eye of MATE"
+msgstr "Python-Konsole für Eye of MATE"
+
+#: ../plugins/send-by-mail/eom-send-by-mail-plugin.c:60
+msgid "Send by Mail"
+msgstr "Als E-Mail versenden"
+
+#: ../plugins/send-by-mail/eom-send-by-mail-plugin.c:62
+msgid "Send the selected images by mail"
+msgstr "Die ausgewählten Bilder als E-Mail versenden"
+
+#: ../plugins/send-by-mail/send-by-mail.eom-plugin.desktop.in.h:1
+msgid "Send By Mail"
+msgstr "Als E-Mail versenden"
+
+#: ../plugins/send-by-mail/send-by-mail.eom-plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Sendet ein Bild als Anhang einer neuen E-Mail"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eom-plugin.desktop.in.h:1
+msgid "Shuffles images in slideshow mode"
+msgstr "Mischen der Bilder im Diaschau-Modus"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eom-plugin.desktop.in.h:2
+msgid "Slideshow Shuffle"
+msgstr "Diaschau-Mischer"

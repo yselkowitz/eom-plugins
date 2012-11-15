@@ -1,0 +1,254 @@
+# Chinese translations for eom-plugins package
+# eom-plugins 软件包的简体中文翻译.
+# Copyright (C) 2008, 2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the eom-plugins package.
+# Eleanor Chen <chenyueg@gmail.com>, 2010.
+# Aron Xu <happyaron.xu@gmail.com>, 2008, 2010.
+# Yunqiang Su <wzssyqa@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eom-plugins master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eom-"
+"plugins&component=general\n"
+"POT-Creation-Date: 2010-02-15 18:55+0000\n"
+"PO-Revision-Date: 2010-02-19 13:41+0800\n"
+"Last-Translator: Eleanor Chen <chenyueg@gmail.com>\n"
+"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../plugins/exif-display/eom-exif-display-plugin.c:136
+msgid " (invalid Unicode)"
+msgstr " (无效的 Unicode)"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../plugins/exif-display/eom-exif-display-plugin.c:212
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1fmm (长)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../plugins/exif-display/eom-exif-display-plugin.c:223
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1fmm (35mm 胶片)"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>常规</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "<b>Histogram</b>"
+msgstr "<b>直方图</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:3
+msgid "Display RGB histogram"
+msgstr "显示图形的色彩模式"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "Display camera settings in statusbar"
+msgstr "在状态栏上显示相机上的设置"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
+msgid "Display per-channel histogram"
+msgstr "显示每一个频道上的图片"
+
+#: ../plugins/exif-display/exif-display.eom-plugin.desktop.in.h:1
+msgid "Displays camera settings and histogram"
+msgstr "显示相机上的设置和图像"
+
+#: ../plugins/exif-display/exif-display.eom-plugin.desktop.in.h:2
+msgid "Exif display"
+msgstr "显示EXIf"
+
+#: ../plugins/exif-display/exif-display.ui.h:1
+msgid "<b>Aperture:</b>"
+msgstr "<b>光圈：</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Description:</b>"
+msgstr "<b>描述：</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>曝光时间：</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>曝光偏差：</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
+msgid "<b>ISO speed:</b>"
+msgstr "<b>ISO 速度：</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Metering:</b>"
+msgstr "<b>测光：</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:7
+msgid "<b>Zoom:</b>"
+msgstr "<b>缩放：</b>"
+
+#: ../plugins/fit-to-width/eom-fit-to-width-plugin.c:85
+msgid "Fit to width"
+msgstr "调整宽度"
+
+#: ../plugins/fit-to-width/eom-fit-to-width-plugin.c:87
+#: ../plugins/fit-to-width/fit-to-width.eom-plugin.desktop.in.h:1
+msgid "Zoom to fit image width"
+msgstr "通过缩放来协调图片的宽度"
+
+#: ../plugins/map/eom-map-plugin.c:321
+msgid "Jump to current image's location"
+msgstr "跳到当前图像的位置"
+
+#: ../plugins/map/eom-map-plugin.c:333
+msgid "Zoom in"
+msgstr "放大"
+
+#: ../plugins/map/eom-map-plugin.c:341
+msgid "Zoom out"
+msgstr "缩小"
+
+#: ../plugins/map/eom-map-plugin.c:355
+#: ../plugins/map/map.eom-plugin.desktop.in.h:2
+msgid "Map"
+msgstr "地图"
+
+#: ../plugins/map/map.eom-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "在地图上显示图片的地理位置"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:124
+msgid "Upload to PicasaWeb"
+msgstr "上传到 PicasaWeb"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:126
+#: ../plugins/postasa/postasa.eom-plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "把您的图片上传到 PicasaWeb"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:320
+msgid "Uploading..."
+msgstr "上传中..."
+
+#: ../plugins/postasa/eom-postasa-plugin.c:366
+msgid "Uploaded"
+msgstr "已上传"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:370
+msgid "Cancelled"
+msgstr "已取消"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:373
+msgid "Failed"
+msgstr "失败"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:520
+#, c-format
+msgid "Login failed. %s"
+msgstr "登录失败。%s"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:524
+msgid "Logged in successully."
+msgstr "登录成功。"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:525
+msgid "Close"
+msgstr "关闭"
+
+#: ../plugins/postasa/eom-postasa-plugin.c:546
+#: ../plugins/postasa/postasa-config.xml.h:1
+msgid "Cancel"
+msgstr "取消"
+
+#. TODO: want to handle passwords more securely
+#: ../plugins/postasa/eom-postasa-plugin.c:552
+msgid "Logging in..."
+msgstr "正在登录..."
+
+#: ../plugins/postasa/eom-postasa-plugin.c:580
+msgid "Please log in to continue upload."
+msgstr "请登录以便继续上传。"
+
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "Login"
+msgstr "登录"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "Password"
+msgstr "密码"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "PicasaWeb Login"
+msgstr "登录 PicasaWeb"
+
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "Username"
+msgstr "用户名"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:1
+msgid "Cancel All"
+msgstr "取消全部"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "Cancel Selected"
+msgstr "取消选中"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Uploads:"
+msgstr "上传："
+
+#: ../plugins/postasa/postasa.eom-plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "PicasaWeb 上传工具"
+
+#: ../plugins/postr/eom-postr-plugin.c:57
+msgid "Upload to Flickr"
+msgstr "上传到 Flickr"
+
+#: ../plugins/postr/eom-postr-plugin.c:59
+#: ../plugins/postr/postr.eom-plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "把您的图片上传到 Flickr"
+
+#: ../plugins/postr/postr.eom-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Flickr 上传工具"
+
+#: ../plugins/pythonconsole/pythonconsole.eom-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Python 控制台"
+
+#: ../plugins/pythonconsole/pythonconsole.eom-plugin.desktop.in.h:2
+msgid "Python console for Eye of MATE"
+msgstr "Python 图形控制台"
+
+#: ../plugins/send-by-mail/eom-send-by-mail-plugin.c:60
+msgid "Send by Mail"
+msgstr "通过邮件发送"
+
+#: ../plugins/send-by-mail/eom-send-by-mail-plugin.c:62
+msgid "Send the selected images by mail"
+msgstr "发送选中的图片通过邮件"
+
+#: ../plugins/send-by-mail/send-by-mail.eom-plugin.desktop.in.h:1
+msgid "Send By Mail"
+msgstr "通过邮件发送"
+
+#: ../plugins/send-by-mail/send-by-mail.eom-plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "发送带有购物中心信息的图片"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eom-plugin.desktop.in.h:1
+msgid "Shuffles images in slideshow mode"
+msgstr "在图片显示模块编制图片"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eom-plugin.desktop.in.h:2
+msgid "Slideshow Shuffle"
+msgstr "重新编制图片"

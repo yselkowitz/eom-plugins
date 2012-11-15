@@ -1,0 +1,18 @@
+plugins/exif-display/eom-exif-display-plugin.c
+[type: gettext/glade]plugins/exif-display/exif-display-config.ui
+plugins/exif-display/exif-display.eom-plugin.desktop.in
+[type: gettext/glade]plugins/exif-display/exif-display.ui
+plugins/fit-to-width/eom-fit-to-width-plugin.c
+plugins/fit-to-width/fit-to-width.eom-plugin.desktop.in
+plugins/map/eom-map-plugin.c
+plugins/map/map.eom-plugin.desktop.in
+plugins/postasa/eom-postasa-plugin.c
+[type: gettext/glade]plugins/postasa/postasa-config.xml
+[type: gettext/glade]plugins/postasa/postasa-uploads.xml
+plugins/postasa/postasa.eom-plugin.desktop.in
+plugins/postr/eom-postr-plugin.c
+plugins/postr/postr.eom-plugin.desktop.in
+plugins/pythonconsole/pythonconsole.eom-plugin.desktop.in
+plugins/send-by-mail/eom-send-by-mail-plugin.c
+plugins/send-by-mail/send-by-mail.eom-plugin.desktop.in
+plugins/slideshowshuffle/slideshowshuffle.eom-plugin.desktop.in

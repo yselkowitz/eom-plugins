@@ -1,0 +1,28 @@
+General Information
+===================
+
+This is version 1.4.0 of eom-plugins. eom-plugins are a set of plugins
+for eom (mate-image-viewer).
+
+Installation
+============
+
+For the moment, you have to ./configure with --prefix=same prefix as you
+configured eom with.
+
+How to choose which plugins to build:
+
+./configure --with-plugins=pl1,pl2,...
+
+where pl1, pl2 ... are one of the following:
+
+exif-display		Displays camera settings and histogram
+fit-to-width		Zoom to fit image width
+map			Display the geolocation of the image on a map
+postasa			Upload your pictures to PicasaWeb
+postr			Upload your pictures to Flickr
+pythonconsole		Embedded Python console
+send-by-mail		Sends an image attached to a new mail
+slideshowshuffle	Shuffles images in slideshow mode
+
+all			All of the above plugins
