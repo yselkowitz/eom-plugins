@@ -1,8 +1,8 @@
  Process this file with autoconf to produce a configure script.
 
 AC_INIT([eom-plugins], [1.4.0],
-        [http://github.com/cygwinports/mate-image-viewer-plugins/issues],
-        [mate-image-viewer-plugins])
+        [http://github.com/yselkowitz/eom-plugins/issues],
+        [eom-plugins])
 
 AC_CONFIG_SRCDIR([plugins])
 AC_PREFIX_PROGRAM([eom])
