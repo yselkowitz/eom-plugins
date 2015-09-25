@@ -28,6 +28,8 @@
 #include <gconf/gconf-client.h>
 
 #include <glib/gi18n-lib.h>
+
+#define HAVE_EXIF 1
 #include <eom/eom-image.h>
 #include <eom/eom-thumb-view.h>
 #include <eom/eom-job-queue.h>
@@ -149,7 +151,7 @@ eom_exif_set_label (GtkWidget *w, ExifData *exif_data, gint tag_id)
 	gchar *label_text = NULL;
 
 	if (exif_data) {
-		buf_ptr = eom_exif_util_get_value (exif_data, tag_id,
+		buf_ptr = eom_exif_data_get_value (exif_data, tag_id,
 						   exif_buffer, 512);
 
 		if (tag_id == EXIF_TAG_DATE_TIME_ORIGINAL && buf_ptr)
@@ -259,7 +261,7 @@ static void manage_exif_data (WindowData *data)
 	image = eom_thumb_view_get_first_selected_image (data->eom_thumb_view);
 	g_return_if_fail (image != NULL);
 
-	exif_data = (ExifData *)eom_image_get_exif_info (image);
+	exif_data = eom_image_get_exif_info (image);
 
 	set_exif_label (exif_data, EXIF_TAG_DATE_TIME_ORIGINAL, data->sidebar_builder, "takenon_label", TRUE);
 
@@ -543,7 +545,7 @@ statusbar_update_exif_data (GtkStatusbar *statusbar, EomThumbView *view)
 		}
 	}
 
-	exif_data = (ExifData *) eom_image_get_exif_info (image);
+	exif_data = eom_image_get_exif_info (image);
 	if (exif_data) {
 		ExifEntry *exif_entry;
 		gchar exposition_time[512];

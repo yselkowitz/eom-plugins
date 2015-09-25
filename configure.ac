@@ -40,9 +40,9 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
 # *********
 
 PKG_CHECK_MODULES([EOM], [
-	glib-2.0 >= 2.12.0
-	gtk+-2.0 >= 2.19.7
-	eom >= 1.2.0
+	glib-2.0
+	gtk+-2.0
+	eom >= 1.10.0
 ])
 AC_SUBST(EOM_LIBS)
 AC_SUBST(EOM_CFLAGS)

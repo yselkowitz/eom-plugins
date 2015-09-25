@@ -2,16 +2,16 @@
 #include <config.h>
 #endif
 
-#include "eom-map-plugin.h"
-
 #include <gmodule.h>
 #include <glib/gi18n-lib.h>
 
+#define HAVE_EXIF 1
 #include <eom/eom-exif-util.h>
 #include <eom/eom-thumb-view.h>
 #include <eom/eom-image.h>
 #include <eom/eom-window.h>
 #include <eom/eom-sidebar.h>
+#include "eom-map-plugin.h"
 
 #include <math.h>
 #include <string.h>
@@ -109,11 +109,11 @@ get_coordinates (EomImage *image,
 	gdouble lon, lat;
 	gfloat hour, min, sec;
 
-	exif_data = (ExifData *) eom_image_get_exif_info (image);
+	exif_data = eom_image_get_exif_info (image);
 
 	if (exif_data) {
 
-		eom_exif_util_get_value (exif_data,
+		eom_exif_data_get_value (exif_data,
 					 EXIF_TAG_GPS_LONGITUDE,
 					 buffer,
 					 32);
@@ -127,14 +127,14 @@ get_coordinates (EomImage *image,
 		lon += min / 60.0;
 		lon += sec / 3600.0;
 
-		eom_exif_util_get_value (exif_data,
+		eom_exif_data_get_value (exif_data,
 					 EXIF_TAG_GPS_LONGITUDE_REF,
 					 buffer,
 					 32);
 		if (strcmp (buffer, "W") == 0)
 			lon *= -1;
 
-		eom_exif_util_get_value (exif_data,
+		eom_exif_data_get_value (exif_data,
 					 EXIF_TAG_GPS_LATITUDE,
 					 buffer,
 					 32);
@@ -148,7 +148,7 @@ get_coordinates (EomImage *image,
 		lat += min / 60.0;
 		lat += sec / 3600.0;
 
-		eom_exif_util_get_value (exif_data,
+		eom_exif_data_get_value (exif_data,
 					 EXIF_TAG_GPS_LATITUDE_REF,
 					 buffer,
 					 32);
