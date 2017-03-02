@@ -1,3 +1,7 @@
+1.16.0
+======
+Port to GTK+3.
+
 1.10.0
 ======
 Fixes for API changes in EOM 1.10.

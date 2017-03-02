@@ -1,6 +1,6 @@
  Process this file with autoconf to produce a configure script.
 
-AC_INIT([eom-plugins], [1.10.0],
+AC_INIT([eom-plugins], [1.16.0],
         [http://github.com/yselkowitz/eom-plugins/issues],
         [eom-plugins])
 
