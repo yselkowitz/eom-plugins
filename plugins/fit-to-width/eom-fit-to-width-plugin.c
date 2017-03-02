@@ -81,7 +81,7 @@ static const gchar * const ui_definition =
 static const GtkActionEntry action_entries[] =
 {
 	{ "EomPluginFitToWidth",
-	  GTK_STOCK_ZOOM_FIT,
+	  "zoom-fit-best",
 	  N_("Fit to width"),
 	  "W",
 	  N_("Zoom to fit image width"),
