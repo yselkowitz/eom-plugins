@@ -36,8 +36,8 @@ typedef struct {
 
 	GtkWidget *jump_to_button;
 
-	ChamplainLayer *layer;
-	ChamplainMarker *marker;
+	ChamplainMarkerLayer *layer;
+	ChamplainLabel *marker;
 } WindowData;
 
 static void
@@ -65,19 +65,19 @@ eom_map_plugin_finalize (GObject *object)
 	G_OBJECT_CLASS (eom_map_plugin_parent_class)->finalize (object);
 }
 
-static ChamplainMarker *
-create_champlain_marker (EomImage *image)
+static ChamplainLabel *
+create_champlain_label (EomImage *image)
 {
 	ClutterActor *thumb, *marker;
 	GdkPixbuf* thumbnail = eom_image_get_thumbnail (image);
 
-	marker = champlain_marker_new ();
-	thumb = clutter_texture_new ();
+	marker = champlain_label_new ();
+	thumb = gtk_clutter_texture_new ();
 
 	if (thumbnail) {
 		gfloat width, height;
 
-		gtk_clutter_texture_set_from_pixbuf (CLUTTER_TEXTURE (thumb),
+		gtk_clutter_texture_set_from_pixbuf (GTK_CLUTTER_TEXTURE (thumb),
 						     thumbnail,
 						     NULL);
 		/* Clip the thumbnail to cut the border */
@@ -91,12 +91,12 @@ create_champlain_marker (EomImage *image)
 		clutter_actor_set_size (thumb, width, height);
 	}
 
-	champlain_marker_set_image (CHAMPLAIN_MARKER (marker), thumb);
+	champlain_label_set_image (CHAMPLAIN_LABEL (marker), thumb);
 
 	if (thumbnail)
 		g_object_unref (thumbnail);
 
-	return CHAMPLAIN_MARKER (marker);
+	return CHAMPLAIN_LABEL (marker);
 }
 
 static gboolean
@@ -181,16 +181,13 @@ create_marker (EomImage *image,
 		return;
 
 	if (get_coordinates (image, &lat, &lon)) {
-		data->marker = create_champlain_marker (image);
+		data->marker = create_champlain_label (image);
 
-		clutter_actor_show (CLUTTER_ACTOR (data->marker));
 		gtk_widget_set_sensitive (data->jump_to_button, TRUE);
-		champlain_base_marker_set_position (CHAMPLAIN_BASE_MARKER (data->marker),
+		champlain_location_set_location (CHAMPLAIN_LOCATION (data->marker),
 						    lat,
 						    lon);
-		clutter_container_add (CLUTTER_CONTAINER (data->layer),
-				       CLUTTER_ACTOR (data->marker),
-				       NULL);
+		champlain_marker_layer_add_marker (data->layer, CHAMPLAIN_MARKER(data->marker));
 	}
 
 }
@@ -232,9 +229,8 @@ selection_changed_cb (EomThumbView *view,
 	g_return_if_fail (image != NULL);
 
 	if (data->marker)
-		clutter_container_remove (CLUTTER_CONTAINER (data->layer),
-					  CLUTTER_ACTOR (data->marker),
-					  NULL);
+		clutter_actor_remove_child (CLUTTER_ACTOR (data->layer),
+					  CLUTTER_ACTOR (data->marker));
 
 	data->thumbnail_changed_id = g_signal_connect (G_OBJECT (image),
 						       "thumbnail-changed",
@@ -287,6 +283,7 @@ impl_activate (EomPlugin *plugin,
 	GtkWidget *sidebar, *thumbview, *vbox, *bbox, *button, *viewport;
 	GtkWidget *embed;
 	WindowData *data;
+	ClutterActor *scale;
 
 	eom_debug (DEBUG_PLUGINS);
 
@@ -307,17 +304,21 @@ impl_activate (EomPlugin *plugin,
 	data->map = gtk_champlain_embed_get_view (GTK_CHAMPLAIN_EMBED (embed));
 	g_object_set (G_OBJECT (data->map),
 		"zoom-level", 3,
-		"scroll-mode", CHAMPLAIN_SCROLL_MODE_KINETIC,
-#if CHAMPLAIN_CHECK_VERSION (0,4,3)
-		"show-scale", TRUE,
-#endif
+		"kinetic-mode", TRUE,
 		NULL);
+	scale = champlain_scale_new ();
+	champlain_scale_connect_view (CHAMPLAIN_SCALE (scale), data->map);
+	/* align to the bottom left */
+	champlain_view_bin_layout_add (data->map, scale,
+		CLUTTER_BIN_ALIGNMENT_START,
+		CLUTTER_BIN_ALIGNMENT_END);
 	gtk_container_add (GTK_CONTAINER (viewport), embed);
 
-	vbox = gtk_vbox_new (FALSE, 0);
+	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 	bbox = gtk_toolbar_new ();
 
-	button = GTK_WIDGET (gtk_tool_button_new_from_stock (GTK_STOCK_JUMP_TO));
+	button = GTK_WIDGET (gtk_tool_button_new (NULL, NULL));
+	gtk_tool_button_set_icon_name (GTK_TOOL_BUTTON (button), "go-jump-symbolic");
 	gtk_widget_set_tooltip_text (button, _("Jump to current image's location"));
 	g_signal_connect (button,
 			  "clicked",
@@ -329,7 +330,8 @@ impl_activate (EomPlugin *plugin,
 	button = GTK_WIDGET (gtk_separator_tool_item_new ());
 	gtk_container_add (GTK_CONTAINER (bbox), button);
 
-	button = GTK_WIDGET (gtk_tool_button_new_from_stock (GTK_STOCK_ZOOM_IN));
+	button = GTK_WIDGET (gtk_tool_button_new (NULL, NULL));
+	gtk_tool_button_set_icon_name (GTK_TOOL_BUTTON (button), "zoom-in-symbolic");
 	gtk_widget_set_tooltip_text (button, _("Zoom in"));
 	g_signal_connect (button,
 			  "clicked",
@@ -337,7 +339,8 @@ impl_activate (EomPlugin *plugin,
 			  data->map);
 	gtk_container_add (GTK_CONTAINER (bbox), button);
 
-	button = GTK_WIDGET (gtk_tool_button_new_from_stock (GTK_STOCK_ZOOM_OUT));
+	button = GTK_WIDGET (gtk_tool_button_new (NULL, NULL));
+	gtk_tool_button_set_icon_name (GTK_TOOL_BUTTON (button), "zoom-out-symbolic");
 	gtk_widget_set_tooltip_text (button, _("Zoom out"));
 	g_signal_connect (button,
 			  "clicked",
@@ -345,12 +348,13 @@ impl_activate (EomPlugin *plugin,
 			  data->map);
 	gtk_container_add (GTK_CONTAINER (bbox), button);
 
-	data->layer = champlain_layer_new();
-	champlain_view_add_layer (CHAMPLAIN_VIEW (data->map), data->layer);
+	data->layer = champlain_marker_layer_new_full(CHAMPLAIN_SELECTION_SINGLE);
+	champlain_view_add_layer (CHAMPLAIN_VIEW (data->map), CHAMPLAIN_LAYER(data->layer));
 
 	sidebar = eom_window_get_sidebar (window);
 	data->viewport = vbox;
 	gtk_box_pack_start (GTK_BOX (vbox), bbox, FALSE, FALSE, 0);
+	gtk_widget_set_vexpand (viewport, TRUE);
 	gtk_container_add (GTK_CONTAINER (vbox), viewport);
 	eom_sidebar_add_page (EOM_SIDEBAR (sidebar), _("Map"), vbox);
 	gtk_widget_show_all (vbox);
