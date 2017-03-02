@@ -41,8 +41,8 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
 
 PKG_CHECK_MODULES([EOM], [
 	glib-2.0
-	gtk+-2.0
-	eom >= 1.10.0
+	gtk+-3.0
+	eom >= 1.16.0
 ])
 AC_SUBST(EOM_LIBS)
 AC_SUBST(EOM_CFLAGS)
@@ -310,9 +310,9 @@ if test "$?" = 1
 then
 	
 	PKG_CHECK_MODULES(CHAMPLAIN,
-		[ champlain-0.8 >= 0.7.1,
-		  champlain-gtk-0.8 >= 0.7.1,
-		  clutter-gtk-0.10 >= 0.10,
+		[ champlain-0.12,
+		  champlain-gtk-0.12,
+		  clutter-gtk-1.0,
 		  libexif >= 0.6.16 ],
 		[],[have_libchamplain=no])
 	AC_SUBST(CHAMPLAIN_LIBS)
